@@ -1,0 +1,6 @@
+created(1793849067.51762).
+assert(score('0','Player 1',easy,15,7,'2026-11-05 11:24:27')).
+assert(score('1','Player 1',medium,94,27,'2026-11-05 11:26:51')).
+assert(score('0','Player 1',easy,15,7,'2026-11-05 18:22:12')).
+assert(score('1','Player 2',easy,31,7,'2026-11-05 18:27:20')).
+assert(score('2','Player 2',medium,76,29,'2026-11-05 18:28:50')).
