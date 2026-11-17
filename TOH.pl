@@ -19,6 +19,8 @@
     - Browser audio starts after the first user interaction.
 */
 
+:- encoding(utf8).
+
 :- use_module(library(http/thread_httpd)).
 :- use_module(library(http/http_dispatch)).
 :- use_module(library(http/http_json)).
@@ -40,7 +42,11 @@
 
 :- dynamic server_started/1.
 
-server_port(8080).
+server_port(Port) :-
+    (   getenv('PORT', Text)
+    ->  atom_number(Text, Port)
+    ;   Port = 8080
+    ).
 database_file('scores.db').
 
 start_server :-
